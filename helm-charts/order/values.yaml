@@ -1,0 +1,20 @@
+order:
+  appUsername: otususer
+  appPassword: otususer
+  appDatabase: otusdb
+  appDbUrl: jdbc:postgresql://postgres-service:5432/otusdb
+service:
+  name: &serviceName order-service
+  port: &servicePort 8080
+  type: ClusterIP
+ingress:
+  enabled: true
+  tls: false
+  rules:
+  - host: arch.homework
+    http:
+      paths:
+      - path: /order-service($|/)(.*)
+        service:
+          name: *serviceName
+          port: *servicePort

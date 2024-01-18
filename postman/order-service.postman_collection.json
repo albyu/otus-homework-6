@@ -1,0 +1,1076 @@
+{
+	"info": {
+		"_postman_id": "eb8eb450-f03c-4c30-b837-6a127ecb9afd",
+		"name": "order-service cluster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28975247",
+		"_collection_link": "https://blue-equinox-580131.postman.co/workspace/otustest~cdb3636e-857b-4491-a072-3c16c5c1baaf/collection/28975247-eb8eb450-f03c-4c30-b837-6a127ecb9afd?action=share&source=collection_link&creator=28975247"
+	},
+	"item": [
+		{
+			"name": "create product beer",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomString1 = Math.random().toString(36).substring(7);\r",
+							"pm.collectionVariables.set(\"orderId\", randomString1);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Beer\",\r\n    \"price\": 10.57\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/product/post",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"product",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product beer",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/order-service/product/get?productId=1",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"product",
+						"get"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product fish",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomString1 = Math.random().toString(36).substring(7);\r",
+							"pm.collectionVariables.set(\"orderId\", randomString1);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"name\": \"Fish\",\r\n    \"price\": 19.03\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/product/post",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"product",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product fish",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/order-service/product/get?productId=2",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"product",
+						"get"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product chips",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomString1 = Math.random().toString(36).substring(7);\r",
+							"pm.collectionVariables.set(\"orderId\", randomString1);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Chips\",\r\n    \"price\": 7.88\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/product/post",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"product",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product chips",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/order-service/product/get?productId=3",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"product",
+						"get"
+					],
+					"query": [
+						{
+							"key": "productId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "try to create order without id",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomString1 = Math.random().toString(36).substring(7);\r",
+							"pm.collectionVariables.set(\"orderId\", randomString1);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {         \r\n            \"product\": {\r\n                \"id\": 1          \r\n            },\r\n            \"quantity\": 33\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/place",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create order",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomString1 = Math.random().toString(36).substring(7);\r",
+							"pm.collectionVariables.set(\"orderId\", randomString1);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {         \r\n            \"product\": {\r\n                \"id\": 1          \r\n            },\r\n            \"quantity\": 33\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/place",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create the same order again",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {         \r\n            \"product\": {\r\n                \"id\": 1          \r\n            },\r\n            \"quantity\": 33\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/place",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/order-service/order/get?orderId={{orderId}}",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"get"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "{{orderId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add orderItem for order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"version\": {{versionId}},\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2\r\n            },\r\n            \"quantity\": 22\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/adjust",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"adjust"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add the same orderItem for order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"version\": {{versionId}},\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2\r\n            },\r\n            \"quantity\": 22\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/adjust",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"adjust"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order again",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/order-service/order/get?orderId={{orderId}}",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"get"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "{{orderId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "try to process order without version",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2\r\n            },\r\n            \"quantity\": 22\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/process",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "try to process order with old version",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"version\": 0,\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2\r\n            },\r\n            \"quantity\": 22\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/process",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"version\": {{versionId}},\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2\r\n            },\r\n            \"quantity\": 22\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/process",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process order again",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"version\": {{versionId}},\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2\r\n            },\r\n            \"quantity\": 22\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/process",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"process"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "try to cancel processed order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId}}\",\r\n    \"version\": {{versionId}},\r\n    \"status\": \"CANCELED\",\r\n    \"orderItems\": [\r\n        {\r\n            \"id\": 25,\r\n            \"product\": {\r\n                \"id\": 3,\r\n                \"name\": \"Chips\",\r\n                \"price\": 6.87\r\n            },\r\n            \"quantity\": 11\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/cancel",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create order2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var randomString1 = Math.random().toString(36).substring(7);\r",
+							"pm.collectionVariables.set(\"orderId2\", randomString1);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId2\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId2}}\",\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {         \r\n            \"product\": {\r\n                \"id\": 3          \r\n            },\r\n            \"quantity\": 11\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/place",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"place"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add orderItem for order2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId2\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId2}}\",\r\n    \"version\": {{versionId2}},\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 2\r\n            },\r\n            \"quantity\": 111\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 3\r\n            },\r\n            \"quantity\": 11\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/adjust",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"adjust"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId2\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/order-service/order/get?orderId={{orderId2}}",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"get"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "{{orderId2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "try to cancel order2 with old version",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId2}}\",\r\n    \"version\": 0,\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1,\r\n                \"name\": \"Beer\",\r\n                \"price\": 12.22\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2,\r\n                \"name\": \"Beer\",\r\n                \"price\": 12.22\r\n            },\r\n            \"quantity\": 33\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/cancel",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel order2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId2\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId2}}\",\r\n    \"version\": {{versionId2}},\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1,\r\n                \"name\": \"Beer\",\r\n                \"price\": 12.22\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2,\r\n                \"name\": \"Beer\",\r\n                \"price\": 12.22\r\n            },\r\n            \"quantity\": 33\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/cancel",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel order2 again",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId2\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId2}}\",\r\n    \"version\": {{versionId2}},\r\n    \"status\": \"NEW\",\r\n    \"orderItems\": [\r\n        {\r\n            \"product\": {\r\n                \"id\": 1,\r\n                \"name\": \"Beer\",\r\n                \"price\": 12.22\r\n            },\r\n            \"quantity\": 33\r\n        },\r\n        {            \r\n            \"product\": {\r\n                \"id\": 2,\r\n                \"name\": \"Beer\",\r\n                \"price\": 12.22\r\n            },\r\n            \"quantity\": 33\r\n        }\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/cancel",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get order2 again",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId2\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://arch.homework/order-service/order/get?orderId={{orderId2}}",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"get"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "{{orderId2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "try to process canceled order2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set(\"versionId\", pm.response.json().version);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"{{orderId2}}\",\r\n    \"version\": {{versionId2}},\r\n    \"status\": \"CANCELED\",\r\n    \"orderItems\": [\r\n        {\r\n            \"id\": 25,\r\n            \"product\": {\r\n                \"id\": 3,\r\n                \"name\": \"Chips\",\r\n                \"price\": 6.87\r\n            },\r\n            \"quantity\": 11\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://arch.homework/order-service/order/process",
+					"protocol": "http",
+					"host": [
+						"arch",
+						"homework"
+					],
+					"path": [
+						"order-service",
+						"order",
+						"process"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "orderId",
+			"value": ""
+		},
+		{
+			"key": "orderId2",
+			"value": ""
+		}
+	]
+}

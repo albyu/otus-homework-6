@@ -1,0 +1,64 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "order.fullname" . }}-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: {{ include "order.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "order.fullname" . }}
+    spec:
+      containers: 
+        - name: {{ include "order.fullname" . }}-app
+          image: aboldyrev1111/otus-homework-6:1.0
+          #env
+          env:
+          - name: POSTGRES_APP_USER
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "order.fullname" . }}-secrets
+                key: appUsername
+          - name: POSTGRES_APP_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "order.fullname" . }}-secrets
+                key: appPassword
+          - name: POSTGRES_URL
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "order.fullname" . }}-secrets
+                key: appDbUrl
+          - name: APP_PORT
+            value: "{{.Values.service.port}}"
+          #volumeMounts
+          volumeMounts:
+          - name: order-configmap
+            mountPath: /opt/otus-homework/config
+          #livenessProbe
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: web
+              scheme: HTTP
+            initialDelaySeconds: 30
+            periodSeconds: 5
+          #readinessProbe
+          readinessProbe:
+            httpGet:
+              path: /actuator/health
+              port: web
+            initialDelaySeconds: 15
+            periodSeconds: 2 
+          #ports
+          ports:
+          - name: web
+            containerPort: {{.Values.service.port}}              
+            protocol: TCP
+      volumes:
+        - name: {{ include "order.fullname" . }}-configmap
+          configMap:
+            name: {{ include "order.fullname" . }}-configmap                  
